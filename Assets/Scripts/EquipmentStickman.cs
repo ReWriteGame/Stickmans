@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
 public class EquipmentStickman : MonoBehaviour
 {
-    [SerializeField] private Material[] equipmant;
-
     private Material currentEquipmant;
+    private MeshRenderer meshRenderer;
 
-    public Material[] Equipmant { get => equipmant; private set => equipmant = value; }
+    public Material CurrentEquipmant { get => currentEquipmant; private set => currentEquipmant = value; }
 
-    public void setEquipmant()
+    private void Start()
     {
-        currentEquipmant = equipmant[Random.Range(0, equipmant.Length)];
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<GateEquipment>())
+        {
+            currentEquipmant = other.GetComponent<GateEquipment>().EquipmantGate;
+            meshRenderer.material = currentEquipmant;
+        }
+    }
 
+  
+    
 }

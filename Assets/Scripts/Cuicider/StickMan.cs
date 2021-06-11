@@ -25,4 +25,9 @@ public class StickMan : MonoBehaviour
         else move.forward();
 
     }
+
+    public void destroy()
+    {
+        Destroy(gameObject);
+    }
 }
