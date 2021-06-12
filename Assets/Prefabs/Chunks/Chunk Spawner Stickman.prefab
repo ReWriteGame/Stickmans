@@ -3147,7 +3147,7 @@ GameObject:
   - component: {fileID: 8050473838778626268}
   - component: {fileID: 6966614447541706028}
   m_Layer: 0
-  m_Name: Chunk Spawner
+  m_Name: Chunk Spawner Stickman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnStickmanZone : MonoBehaviour
 {
     [SerializeField] private GameObject[] spawnObjects;
-    [Range(0, 20)] [SerializeField] private int objectOnPlatform = 5;
+    [Range(0, 100)] [SerializeField] private int objectOnPlatform = 5;
 
 
     private BoxCollider boxCollider;

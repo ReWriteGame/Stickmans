@@ -10,12 +10,15 @@ public class ChunkPlacer : MonoBehaviour
 
     private List<Chunk> spawnedChunks = new List<Chunk>();
 
+    public int NumberOfChunk { get => numberOfChunk; set => numberOfChunk = value; }
+
     private void Start()
     {
         spawnedChunks.Add(firstChunk);
 
         for (int i = 0; i < numberOfChunk; i++)
             spawnRandomChunk();
+
     }
 
     private void spawnRandomChunk()
@@ -29,5 +32,14 @@ public class ChunkPlacer : MonoBehaviour
     {
         Destroy(spawnedChunks[index].gameObject);
         spawnedChunks.RemoveAt(index);
+    }
+
+    public Vector3 getPosEndOfChunk(int index = 0)
+    {
+        return spawnedChunks[index].End.position;
+    }
+    public Vector3 getPosBeginOfChunk(int index = 0)
+    {
+        return spawnedChunks[index].Begin.position;
     }
 }
