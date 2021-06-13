@@ -36,22 +36,22 @@ public class Move : MonoBehaviour
 
     public void forward()
     {
-        direction = Vector3.forward;
+        direction += Vector3.forward;
         isMoving = true;
     }
     public void back()
     {
-        direction = Vector3.back;
+        direction += Vector3.back;
         isMoving = true;
     }
     public void right()
     {
-        direction = Vector3.right;
+        direction += Vector3.right;
         isMoving = true;
     }
     public void left()
     {
-        direction = Vector3.left;
+        direction += Vector3.left;
         isMoving = true;
     }
 
@@ -74,7 +74,7 @@ public class Move : MonoBehaviour
         if (canMove)
         {
             Vector3 force = direction.normalized * speed;
-            rb.AddForce(rb.mass * force);// нужно проверить нужгно ли умнажать на массу
+            rb.AddForce(rb.mass * force);//  увеличим силу пропорционально массе 
         }
     }
     
