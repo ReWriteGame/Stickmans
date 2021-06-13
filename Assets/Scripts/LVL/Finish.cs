@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Finish : MonoBehaviour
 {
     private Transform finish;
@@ -30,12 +31,10 @@ public class Finish : MonoBehaviour
             LevelController.Instance.reStartLevelWrapper();
         }
 
-        if (other.gameObject == objectForFinish[0])
-            LevelController.Instance.reStartLevelWrapper();
-        print(other.gameObject);
         foreach (GameObject obj in objectForFinish)
         {
-          
+            if (other.gameObject == obj)
+                LevelController.Instance.reStartLevelWrapper();
         }
     }
 }
