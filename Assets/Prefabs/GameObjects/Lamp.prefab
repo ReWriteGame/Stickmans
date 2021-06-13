@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3602678852067404512}
   - component: {fileID: 3602678852067404515}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,11 +132,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3602678853001242593}
     m_Modifications:
+    - target: {fileID: 1412316093186344996, guid: f9cd37644af6dd94699461a0e4219664,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1412316093649370311, guid: f9cd37644af6dd94699461a0e4219664,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cb3984ecc89532b429842e634d4a34ca, type: 2}
+    - target: {fileID: 1412316093941139833, guid: f9cd37644af6dd94699461a0e4219664,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1412316094152265348, guid: f9cd37644af6dd94699461a0e4219664,
         type: 3}
       propertyPath: m_RootOrder
@@ -222,6 +232,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6.91
       objectReference: {fileID: 0}
+    - target: {fileID: 1412316094771701618, guid: f9cd37644af6dd94699461a0e4219664,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9cd37644af6dd94699461a0e4219664, type: 3}
 --- !u!4 &2478887814048859308 stripped
