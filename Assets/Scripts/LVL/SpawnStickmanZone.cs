@@ -8,6 +8,8 @@ public class SpawnStickmanZone : MonoBehaviour
     [SerializeField] private GameObject[] spawnObjects;
     [Range(0, 100)] [SerializeField] private int objectOnPlatform = 5;
 
+    
+
 
     private BoxCollider boxCollider;
 
@@ -22,7 +24,7 @@ public class SpawnStickmanZone : MonoBehaviour
 
     void createObject()
     {
-        GameObject newObject = Instantiate(spawnObjects[Random.Range(0, spawnObjects.Length)]);// transform спавнит чанки дочерними
+        GameObject newObject = Instantiate(spawnObjects[Random.Range(0, spawnObjects.Length)], transform);// transform спавнит чанки дочерними
         newObject.transform.position = spawnPosition(boxCollider.transform.position, boxCollider.size);
     }
 

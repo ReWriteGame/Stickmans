@@ -14,17 +14,19 @@ public class StickMan : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         move = GetComponent<Move>();
     }
-   /* private void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
+        /* if (Input.GetKey(KeyCode.D))
             move.vectorDirection(Vector3.right + Vector3.forward);
         
         else if (Input.GetKey(KeyCode.A))
             move.vectorDirection(Vector3.left + Vector3.forward);
             
-        else move.forward();
+        else move.forward();*/
+
+        move.vectorDirection(CoopController.Instance.DirectionMove);
         
-    }*/
+    }
 
     public void destroy()
     {
